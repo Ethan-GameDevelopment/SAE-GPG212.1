@@ -21,7 +21,7 @@ public class PlayerManager : MonoBehaviour
     void Update()
     {
         playerHealthDisplay.text = "♥ | " + playerHP + "/ 10";
-        playerPointsDisplay.text = "★ | " + playerPoints;
+        playerPointsDisplay.text = "POINTS | " + playerPoints;
     }
 
     public void TakeDamage()
