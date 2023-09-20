@@ -91,6 +91,7 @@ public class PlayerPrompts : MonoBehaviour
                 break;
             case 3:
                 currentPrompt = "LEFT";
+                break;
         }
         
     }

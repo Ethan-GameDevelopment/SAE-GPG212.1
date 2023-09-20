@@ -155,6 +155,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonPrompts: 
   customLimit: 15
+  currentPrompt: 
+  currentPromptDisplay: {fileID: 393567670}
 --- !u!4 &393429828
 Transform:
   m_ObjectHideFlags: 0
