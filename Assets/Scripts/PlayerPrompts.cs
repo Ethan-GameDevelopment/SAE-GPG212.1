@@ -26,8 +26,6 @@ public class PlayerPrompts : MonoBehaviour
         
         // • CONTROLS • //
         
-        //< I know that this could probably be one
-        
         // UP ARROW
         if(Input.GetKeyDown(KeyCode.UpArrow))
         {
