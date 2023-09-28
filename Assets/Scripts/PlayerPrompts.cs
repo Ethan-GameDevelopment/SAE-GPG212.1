@@ -34,7 +34,7 @@ public class PlayerPrompts : MonoBehaviour
                 CorrectInput(); 
             } else {
                 // FEEDBACK FOR INCORRECT INPUT
-                gameObject.GetComponent<PlayerManager>().TakeDamage();
+                gameObject.GetComponent<Player>().TakeDamage();
             }
         }
         
@@ -46,7 +46,7 @@ public class PlayerPrompts : MonoBehaviour
                 CorrectInput(); 
             } else {
                 // FEEDBACK FOR INCORRECT INPUT
-                gameObject.GetComponent<PlayerManager>().TakeDamage();
+                gameObject.GetComponent<Player>().TakeDamage();
             }
         }
         
@@ -58,7 +58,7 @@ public class PlayerPrompts : MonoBehaviour
                 CorrectInput(); 
             } else {
                 // FEEDBACK FOR INCORRECT INPUT
-                gameObject.GetComponent<PlayerManager>().TakeDamage();
+                gameObject.GetComponent<Player>().TakeDamage();
             }
         }
         
@@ -70,7 +70,7 @@ public class PlayerPrompts : MonoBehaviour
                 CorrectInput(); 
             } else {
                 // FEEDBACK FOR INCORRECT INPUT
-                gameObject.GetComponent<PlayerManager>().TakeDamage();
+                gameObject.GetComponent<Player>().TakeDamage();
             }
         }
         
@@ -104,7 +104,7 @@ public class PlayerPrompts : MonoBehaviour
 
     public void CorrectInput()
     {
-        gameObject.GetComponent<PlayerManager>().AddPoints();
+        gameObject.GetComponent<Player>().AddPoints();
         buttonPrompts.RemoveAt(0);
     }
 

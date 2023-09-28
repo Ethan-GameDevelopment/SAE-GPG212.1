@@ -13,6 +13,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerUIPanel.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -88,7 +91,7 @@
       <option name="presentableId" value="Default" />
       <updated>1695859334010</updated>
       <workItem from="1695859378699" duration="1473000" />
-      <workItem from="1695862603310" duration="647000" />
+      <workItem from="1695862603310" duration="4232000" />
     </task>
     <servers />
   </component>
