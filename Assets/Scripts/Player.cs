@@ -15,11 +15,11 @@ public class Player : MonoBehaviour
     public bool movementAllowed;
 
     // Movement // 
-    public KeyCode Up;
-    public KeyCode Down;
-    public KeyCode Left;
-    public KeyCode Right;
-    public KeyCode Jump;
+    public KeyCode up;
+    public KeyCode down;
+    public KeyCode left;
+    public KeyCode right;
+    public KeyCode jump;
 
     // Attacks //
     // ? / public KeyCode Spin;
@@ -41,15 +41,15 @@ public class Player : MonoBehaviour
 
         if (movementAllowed)
         {
-            if (Input.GetKey(Right)) direction.z = speed;
+            if (Input.GetKey(right)) direction.z = speed;
 
-            if (Input.GetKey(Left)) direction.z = -speed;
+            if (Input.GetKey(left)) direction.z = -speed;
 
-            if (Input.GetKey(Up)) direction.x = -speed;
+            if (Input.GetKey(up)) direction.x = -speed;
 
-            if (Input.GetKey(Down)) direction.x = speed;
+            if (Input.GetKey(down)) direction.x = speed;
 
-            if (Input.GetKey(Jump)) direction.y += jumpHeight;
+            if (Input.GetKey(jump)) direction.y += jumpHeight;
         }
 
 
