@@ -1,79 +1,69 @@
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
 public class PlayerPrompts : MonoBehaviour
 {
-
     public List<int> buttonPrompts;
     public int customLimit;
 
     public string currentPrompt;
 
     public TextMeshProUGUI currentPromptDisplay;
-    
+
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         GeneratePromptString(customLimit);
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         currentPromptDisplay.text = currentPrompt;
-        
+
         // • CONTROLS • //
-        
+
         // UP ARROW
-        if(Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             if (buttonPrompts[0] == 0)
-            {
-                CorrectInput(); 
-            } else {
+                CorrectInput();
+            else
                 // FEEDBACK FOR INCORRECT INPUT
                 gameObject.GetComponent<Player>().TakeDamage();
-            }
         }
-        
+
         // RIGHT ARROW
-        if(Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             if (buttonPrompts[0] == 1)
-            {
-                CorrectInput(); 
-            } else {
+                CorrectInput();
+            else
                 // FEEDBACK FOR INCORRECT INPUT
                 gameObject.GetComponent<Player>().TakeDamage();
-            }
         }
-        
+
         // DOWN ARROW
-        if(Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             if (buttonPrompts[0] == 2)
-            {
-                CorrectInput(); 
-            } else {
+                CorrectInput();
+            else
                 // FEEDBACK FOR INCORRECT INPUT
                 gameObject.GetComponent<Player>().TakeDamage();
-            }
         }
-        
+
         // LEFT ARROW
-        if(Input.GetKeyDown(KeyCode.LeftArrow))
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             if (buttonPrompts[0] == 3)
-            {
-                CorrectInput(); 
-            } else {
+                CorrectInput();
+            else
                 // FEEDBACK FOR INCORRECT INPUT
                 gameObject.GetComponent<Player>().TakeDamage();
-            }
         }
-        
+
         // • UI • //
 
         switch (buttonPrompts[0])
@@ -91,15 +81,11 @@ public class PlayerPrompts : MonoBehaviour
                 currentPrompt = "LEFT";
                 break;
         }
-        
     }
 
-    void GeneratePromptString(int promptLimit)
+    private void GeneratePromptString(int promptLimit)
     {
-        for(int i = 0; i < promptLimit; i++) 
-        { 
-            buttonPrompts.Add(Random.Range(0, 3));
-        }
+        for (var i = 0; i < promptLimit; i++) buttonPrompts.Add(Random.Range(0, 3));
     }
 
     public void CorrectInput()
@@ -107,6 +93,4 @@ public class PlayerPrompts : MonoBehaviour
         gameObject.GetComponent<Player>().AddPoints();
         buttonPrompts.RemoveAt(0);
     }
-
-
 }
