@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
 {
     // •  CONNECTIONS • 
     public GameManager gameManager;
-    // ? / public Material myMaterial = GameObject.GetComponent<Renderer>().material;
+    public Material myMaterial;
     
     // • PLAYER STATS •
     public string playerName;
@@ -25,12 +25,15 @@ public class Player : MonoBehaviour
     public int jumpHeight = 2;
     public bool movementAllowed;
     private static readonly int EmissionColor = Shader.PropertyToID("_EmissionColor");
+    private static readonly int Color1 = Shader.PropertyToID("Color");
 
     // Start is called before the first frame update
     private void Start()
     {
-        
+        myMaterial = gameObject.GetComponent<Renderer>().material;
     }
+
+    
 
     // Update is called once per frame
     private void Update()
@@ -65,7 +68,7 @@ public class Player : MonoBehaviour
         if (other != null && other.gameObject.GetComponent<SpotlightMarker>())
         {
             print("You entered a spotlight.");
-            // ? / myMaterial.SetColor(EmissionColor, Color.red);
+            myMaterial.SetColor(Color1, red);
         }
     }
     
@@ -74,7 +77,7 @@ public class Player : MonoBehaviour
         if (other.gameObject != null && other.gameObject.GetComponent<SpotlightMarker>())
         {
             print("You exited a spotlight.");
-            // ? / myMaterial.SetColor(EmissionColor, Color.black);
+            myMaterial.SetColor(Color1, white);
 
         }
     }
