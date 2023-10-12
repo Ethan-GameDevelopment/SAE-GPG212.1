@@ -7,7 +7,7 @@ using UnityEngine.Experimental.GlobalIllumination;
 public class SpotlightMarker : MonoBehaviour
 {
     // •  CONNECTIONS • 
-    public SpotLight spotlightMarker;
+    
     
     // • SPOTLIGHT STATS • 
     public enum Team
@@ -16,15 +16,12 @@ public class SpotlightMarker : MonoBehaviour
     }
     
     // connected player Variable
-    public Color32 markerColour;
+    // public int markerColour;
     
     // Start is called before the first frame update
     void OnEnable()
     {
-        ConfigureSpotlightMarker(Color32 inputColour)
-        {
-            spotlightMarker.color = markerColour;
-        }
+        gameObject.GetComponent<Light>().color = Color.red;
     }
 
     // Update is called once per frame
@@ -33,9 +30,9 @@ public class SpotlightMarker : MonoBehaviour
         
     }
 
-    public void ConfigureSpotlightMarker(enum inputTeam, Color32 teamColour)
+    /* public void ConfigureSpotlightMarker(Color32 teamColour)
     {
-        Team = inputTeam;
+        
         markerColour = teamColour;
-    }
+    } */
 }

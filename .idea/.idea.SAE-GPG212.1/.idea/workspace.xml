@@ -6,9 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="ebc46509-c284-42ae-ab2e-eb89d40a6a9d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SAE-GPG212.1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SAE-GPG212.1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Team Colours/Player 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Team Colours/Player 1.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerUIPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerUIPanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SpotlightMarker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SpotlightMarker.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +20,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ISpotlight.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerUIPanel.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -42,6 +44,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "editor.preferences.smartKeys_rider",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -102,7 +105,7 @@
       <workItem from="1695862603310" duration="4453000" />
       <workItem from="1696375305144" duration="1372000" />
       <workItem from="1696383014055" duration="11333000" />
-      <workItem from="1697072795134" duration="4720000" />
+      <workItem from="1697072795134" duration="10218000" />
     </task>
     <servers />
   </component>

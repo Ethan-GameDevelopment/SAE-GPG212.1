@@ -1,9 +1,13 @@
-﻿using UnityEngine;
+﻿using System;
+using Unity.VisualScripting;
+using UnityEngine;
+using static UnityEngine.Color;
 
 public class Player : MonoBehaviour
 {
     // •  CONNECTIONS • 
     public GameManager gameManager;
+    // ? / public Material myMaterial = GameObject.GetComponent<Renderer>().material;
     
     // • PLAYER STATS •
     public string playerName;
@@ -20,6 +24,7 @@ public class Player : MonoBehaviour
     public float movementSpeed;
     public int jumpHeight = 2;
     public bool movementAllowed;
+    private static readonly int EmissionColor = Shader.PropertyToID("_EmissionColor");
 
     // Start is called before the first frame update
     private void Start()
@@ -53,10 +58,44 @@ public class Player : MonoBehaviour
         }
     }
     
+    // SPOTLIGHT FEEDBACK: Make Character Glow to show they are in the correct spotlight.
+
+    public void OnTriggerStay(Collider other)
+    {
+        if (other != null && other.gameObject.GetComponent<SpotlightMarker>())
+        {
+            print("You entered a spotlight.");
+            // ? / myMaterial.SetColor(EmissionColor, Color.red);
+        }
+    }
+    
+    public void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject != null && other.gameObject.GetComponent<SpotlightMarker>())
+        {
+            print("You exited a spotlight.");
+            // ? / myMaterial.SetColor(EmissionColor, Color.black);
+
+        }
+    }
+    
+    
+    
     public void TakeDamage()
     {
         hp -= 1;
     }
+
+    /* private void EnterSpotlight()
+    {
+        
+    } */
+
+    /* private void ExitSpotlight()
+     {
+         
+     } */
+    
 
     public void AddPoints()
     {
