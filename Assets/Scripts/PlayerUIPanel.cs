@@ -19,7 +19,7 @@ public class PlayerUIPanel : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        playerName.text = player.GetComponent<Player>().playerName;
+        if (playerName != null) playerName.text = player.GetComponent<Player>().playerName;
     }
 
     // Update is called once per frame
