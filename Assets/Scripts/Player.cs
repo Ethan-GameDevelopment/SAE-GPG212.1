@@ -65,7 +65,7 @@ public class Player : MonoBehaviour
 
     public void OnTriggerStay(Collider other)
     {
-        if (other != null && other.gameObject.GetComponent<SpotlightMarker>())
+        if (other != null && other.gameObject.GetComponent<PlayerPrompts>())
         {
             print("You entered a spotlight.");
             myMaterial.SetColor(Color1, red);
@@ -74,7 +74,7 @@ public class Player : MonoBehaviour
     
     public void OnTriggerExit(Collider other)
     {
-        if (other.gameObject != null && other.gameObject.GetComponent<SpotlightMarker>())
+        if (other.gameObject != null && other.gameObject.GetComponent<PlayerPrompts>())
         {
             print("You exited a spotlight.");
             myMaterial.SetColor(Color1, white);

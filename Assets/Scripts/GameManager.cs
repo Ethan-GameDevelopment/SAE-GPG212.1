@@ -7,6 +7,10 @@ public class GameManager : MonoBehaviour
     public int maxPoints;
     public int maxHealth;
 
+    public int dancepromptMin;
+    public int dancepromptMax;
+    
+
     // Start is called before the first frame update
     private void Start()
     {
